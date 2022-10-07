@@ -1,13 +1,65 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'Josefin Sans', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body,
+html {
+  scroll-behavior: smooth;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: #0F0600;
+}
+
+.lg-btn {
+  height: 51px;
+  border-radius: 4px;
+  background: linear-gradient(108.96deg, #F59848 -27.23%, #BD5103 20.1%, #D28B00 97.96%, #CA7501 108.78%, #573E2A 130.21%, #1F1F1F 155.87%);
+}
+
+.lg-border-btn {
+  height: 51px;
+  background-image: radial-gradient(circle at 100% 100%, transparent 7px, #f59848 7px, #f59848 9px, transparent 9px), linear-gradient(to right, #f59848, #bd5103), radial-gradient(circle at 0% 100%, transparent 7px, #bd5103 7px, #bd5103 9px, transparent 9px), linear-gradient(to bottom, #bd5103, #573e2a), radial-gradient(circle at 0% 0%, transparent 7px, #573e2a 7px, #573e2a 9px, transparent 9px), linear-gradient(to left, #573e2a, #1f1f1f), radial-gradient(circle at 100% 0%, transparent 7px, #1f1f1f 7px, #1f1f1f 9px, transparent 9px), linear-gradient(to top, #1f1f1f, #f59848);
+  background-size: 9px 9px, calc(100% - 18px) 2px, 9px 9px, 2px calc(100% - 18px);
+  background-position: top left, top center, top right, center right, bottom right, bottom center, bottom left, center left;
+  background-repeat: no-repeat;
+  padding: 0 41px;
+}
+
+
+.lg-text {
+  background: #F59848;
+  background: linear-gradient(to right, #F59848 0%, #BD5103 20%, #D28B00 42%, #CA7501 82%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.topnav {
+  background: linear-gradient(108.96deg, #F59848 -27.23%, #573E2A 67.08%, #573E2A 130.21%, #1F1F1F 155.87%),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.13));
+}
+
+.centers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.launch-box {
+  background: linear-gradient(108.96deg, rgba(245, 152, 72, 0.2) -27.23%, rgba(189, 81, 3, 0.2) 20.1%, rgba(190, 84, 3, 0.2) 56.48%, rgba(210, 139, 0, 0.2) 69.51%, rgba(202, 117, 1, 0.2) 108.78%, rgba(87, 62, 42, 0.2) 130.21%, rgba(31, 31, 31, 0.2) 155.87%);
+  border-radius: 16px;
+}
+
+.inactive-lg-btn {
+  background: linear-gradient(108.96deg, rgba(245, 152, 72, 0.13) -27.23%, rgba(189, 81, 3, 0.13) 20.1%, rgba(190, 84, 3, 0.13) 56.48%, rgba(210, 139, 0, 0.13) 69.51%, rgba(202, 117, 1, 0.13) 108.78%, rgba(87, 62, 42, 0.13) 130.21%, rgba(31, 31, 31, 0.13) 155.87%);
+}
+
+.light-gradient {
+  background: linear-gradient(108.96deg, rgba(245, 152, 72, 0.05) -27.23%, rgba(189, 81, 3, 0.05) 20.1%, rgba(190, 84, 3, 0.05) 56.48%, rgba(210, 139, 0, 0.05) 69.51%, rgba(202, 117, 1, 0.05) 108.78%, rgba(87, 62, 42, 0.05) 130.21%, rgba(31, 31, 31, 0.05) 155.87%);
 }
