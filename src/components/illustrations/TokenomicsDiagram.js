@@ -2,7 +2,7 @@ import React from "react";
 
 const TokenomicsDiagram = () => {
   return (
-    <div className="h-[424px] relative centers w-full mt-[-80px]">
+    <div className="h-[424px] relative centers w-full mt-[-80px] xl:hidden">
       <div className="absolute h-8 w-8 rounded-full left-[40px] top-[10px] bg-[#F7D96D]" />
       <svg
         width="424"

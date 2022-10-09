@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import clsx from "classnames";
 import { ReactComponent as Pillar } from "assets/svgs/pillar.svg";
+import { ReactComponent as TokenomicsBig } from "assets/svgs/tokenomics-big.svg";
 
 const Table = styled.div`
   background: linear-gradient(
@@ -58,9 +59,15 @@ const tableData = [
 const TokenomicsDetail = () => {
   return (
     <div>
-      <div className="lg-border-btn flex space-x-[40.33px] !h-auto !p-2 overflow-hidden">
+      <div className="xl:!pt-8 xl:!pb-3 lg-border-btn flex space-x-[40.33px] !h-auto !p-2 overflow-hidden xl:items-center xl:justify-center xl:max-w-[816px] xl:mx-auto">
         {data.map((item, key) => (
-          <div key={key}>
+          <div
+            key={key}
+            className={clsx({
+              "xl:border-r-[0.4px] xl:border-r-[#F59848] xl:pr-[40.33px]":
+                key !== data.length - 1,
+            })}
+          >
             <span className="text-12 text-white font-semibold text-center">
               {item.field}
             </span>
@@ -68,44 +75,50 @@ const TokenomicsDetail = () => {
           </div>
         ))}
       </div>
-      <div className="h-[40px] w-full relative">
+      <div className="h-[40px] w-full relative xl:hidden">
         <Pillar className="absolute left-[25%]" />
         <Pillar className="absolute left-[75%]" />
       </div>
-      <Table className="w-full p-4">
-        <div className="grid grid-cols-[10%_30%_20%_40%] mb-4 space-x-2">
-          <span className="text-12 font-bold lg-text !justify-start">
-            Chart
-          </span>
-          <span className="text-12 font-bold lg-text !justify-start">
-            Token Amount
-          </span>
-          <span className="text-12 font-bold lg-text !justify-start">
-            Percentage
-          </span>
-          <span className="text-12 font-bold lg-text !justify-start">
-            Token Distributiom
-          </span>
-        </div>
-        {tableData.map((data, index) => (
-          <div
-            className={clsx("grid grid-cols-[10%_30%_20%_40%] space-x-2 mb-4", {
-              "!mb-[18px]": index + 1 === data.length,
-            })}
-            key={index}
-          >
-            <div
-              className="h-3 w-3 rounded-[4px]"
-              style={{ backgroundColor: data.chart }}
-            />
-            <span className="text-12 text-white">{data.token_amount}</span>
-            <span className="text-12 text-white">{data.percentage}</span>
-            <span className="text-12 text-white">
-              {data.token_distribution}
+      <div className="flex xl:pt-1 xl:items-center">
+        <TokenomicsBig className="hidden xl:block" />
+        <Table className="w-full p-4 xl:max-w-[562px]">
+          <div className="grid grid-cols-[10%_30%_20%_40%] mb-4 space-x-2">
+            <span className="text-12 font-bold lg-text !justify-start">
+              Chart
+            </span>
+            <span className="text-12 font-bold lg-text !justify-start">
+              Token Amount
+            </span>
+            <span className="text-12 font-bold lg-text !justify-start">
+              Percentage
+            </span>
+            <span className="text-12 font-bold lg-text !justify-start">
+              Token Distributiom
             </span>
           </div>
-        ))}
-      </Table>
+          {tableData.map((data, index) => (
+            <div
+              className={clsx(
+                "grid grid-cols-[10%_30%_20%_40%] space-x-2 mb-4",
+                {
+                  "!mb-[18px]": index + 1 === data.length,
+                }
+              )}
+              key={index}
+            >
+              <div
+                className="h-3 w-3 rounded-[4px]"
+                style={{ backgroundColor: data.chart }}
+              />
+              <span className="text-12 text-white">{data.token_amount}</span>
+              <span className="text-12 text-white">{data.percentage}</span>
+              <span className="text-12 text-white">
+                {data.token_distribution}
+              </span>
+            </div>
+          ))}
+        </Table>
+      </div>
     </div>
   );
 };

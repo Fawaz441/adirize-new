@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { ReactComponent as Dots } from "assets/svgs/dots.svg";
+import { ReactComponent as DotsLarge } from "assets/svgs/dots-large.svg";
 
 const Container = styled.div`
   background: linear-gradient(
@@ -11,8 +12,6 @@ const Container = styled.div`
     rgba(31, 31, 31, 0.2) 155.87%
   );
   border-radius: 12px;
-  width: 48px;
-  height: 52px;
 
   > span {
     text-shadow: 0px 0px 24px #fed41a;
@@ -23,12 +22,17 @@ const CountdownItem = ({ hideDots = false, value, label }) => {
   return (
     <div className="flex space-x-2 items-center">
       <div className="centers flex flex-col space-y-2">
-        <Container className="centers">
-          <span className="text-white text-base font-bold">{value}</span>
+        <Container className="centers h-[52px] w-[48px] xl:w-[72px] xl:h-[80px] xl:p-6">
+          <span className="text-white text-base font-bold xl:text-2xl">
+            {value}
+          </span>
         </Container>
-        <span className="text-white text-12 font-semibold">{label}</span>
+        <span className="text-white text-12 font-semibold xl:text-base">
+          {label}
+        </span>
       </div>
-      {!hideDots && <Dots className="!mr-2" />}
+      {!hideDots && <Dots className="!mr-2 xl:hidden" />}
+      {!hideDots && <DotsLarge className="!mr-2 hidden xl:block" />}
     </div>
   );
 };

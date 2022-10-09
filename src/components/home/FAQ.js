@@ -119,11 +119,11 @@ const faqItems = [
 
 const FAQ = () => {
   return (
-    <div className="mt-[100px]">
+    <div className="mt-[100px] xl:!mt-[128px]">
       <h3 className="text-center lg-text text-[32px] font-bold mb-[40px]">
         Frequently Asked Questions
       </h3>
-      <div className="flex flex-col space-y-8">
+      <div className="flex flex-col space-y-8 xl:max-w-[462px] xl:mx-auto">
         {faqItems.map((faqItem, index) => (
           <FAQItem
             question={faqItem.question}

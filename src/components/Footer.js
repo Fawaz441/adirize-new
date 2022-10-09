@@ -1,9 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { ReactComponent as Logo } from "assets/svgs/logo.svg";
-import { ReactComponent as Discord } from "assets/svgs/social/discord.svg";
-import { ReactComponent as Facebook } from "assets/svgs/social/facebook.svg";
-import { ReactComponent as Instagram } from "assets/svgs/social/instagram.svg";
 import { ReactComponent as Telegram } from "assets/svgs/social/telegram.svg";
 import { ReactComponent as Twitter } from "assets/svgs/social/twitter.svg";
 import { ReactComponent as Binance } from "assets/svgs/binance.svg";
@@ -50,16 +47,17 @@ const Footer = () => {
         <span className="text-center text-white/[.4] text-12">
           Join our social media channels to participate in the discussion
         </span>
-        <div className="justify-center flex items-center space-x-[40px]">
-          <Telegram />
-          <Discord />
-          <Twitter />
-          <Facebook />
-          <Instagram />
+        <div className="justify-center flex items-center space-x-[40px] xl:space-x-[300px] xl:pt-[40.75px]">
+          <a rel="noreferrer" target={"_blank"}>
+            <Telegram />
+          </a>
+          <a rel="noreferrer" target={"_blank"}>
+            <Twitter />
+          </a>
         </div>
       </FooterWrapper>
-      <SubFooter className="p-3 flex flex-col space-y-3">
-        <p className="text-white text-12 text-center">
+      <SubFooter className="p-3 flex flex-col space-y-3 xl:flex-row xl:space-y-0 xl:py-[30px] xl:px-[80px] xl:justify-between">
+        <p className="text-white text-12 xl:text-sm text-center">
           ©2021 ADIRIZE. All rights reserved
         </p>
         <div className="justify-center flex space-x-[30px] items-center">
