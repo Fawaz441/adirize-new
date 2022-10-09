@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import StableCoin from "../illustrations/StableCoin";
 import { ReactComponent as StableCoin2 } from "assets/svgs/stable-coin-2.svg";
+import { LINKS } from "utils/constants";
 
 const Background = styled.div`
   background: linear-gradient(
@@ -47,9 +48,16 @@ const TokenInfo = () => {
           <span className="text-sm font-semibold text-white">
             How does it work?
           </span>
-          <button className="lg-btn text-white px-4">Whitepaper</button>
+          <a
+            href={LINKS.whitepaper}
+            target="_blank"
+            rel="noreferrer"
+            className="lg-btn flex items-center justify-center text-white px-4"
+          >
+            Whitepaper
+          </a>
         </Background>
-        <Stability className="mt-8 w-full max-w-[523px]">
+        <Stability className="mt-8 w-full max-w-[523px] mx-auto">
           <h3 className="lg-text text-[40px] !justify-start mb-6 !hidden xl:block">
             Is ADI a Stable Coin?
           </h3>

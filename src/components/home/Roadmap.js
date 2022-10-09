@@ -66,7 +66,7 @@ const RoadMapItem = ({ name, phases }) => {
 
 const Roadmap = () => {
   return (
-    <div className="mt-[60px]">
+    <div className="!mt-[60px]">
       <h2 className="lg-text text-[32px] font-bold text-center mb-[38px]">
         Adirize DAO Roadmap
       </h2>

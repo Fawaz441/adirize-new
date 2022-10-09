@@ -3,7 +3,7 @@ import { ReactComponent as Layers2 } from "assets/svgs/layers-2.svg";
 
 const HowToBenefit = () => {
   return (
-    <div className="xl:!mt-[100px]">
+    <div className="!mt-[100px]">
       <h3 className="lg-text text-[32px] font-bold text-center">
         How To Benefit With Adirize
       </h3>

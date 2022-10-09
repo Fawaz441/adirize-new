@@ -6,6 +6,7 @@ import { ReactComponent as Twitter } from "assets/svgs/social/twitter.svg";
 import { ReactComponent as Binance } from "assets/svgs/binance.svg";
 import { ReactComponent as Ethereum } from "assets/svgs/ethereum.svg";
 import { ReactComponent as Solana } from "assets/svgs/solana.svg";
+import { LINKS } from "utils/constants";
 
 const FooterWrapper = styled.div`
   background: linear-gradient(
@@ -48,10 +49,10 @@ const Footer = () => {
           Join our social media channels to participate in the discussion
         </span>
         <div className="justify-center flex items-center space-x-[40px] xl:space-x-[300px] xl:pt-[40.75px]">
-          <a rel="noreferrer" target={"_blank"}>
+          <a rel="noreferrer" target={"_blank"} href={LINKS.telegram}>
             <Telegram />
           </a>
-          <a rel="noreferrer" target={"_blank"}>
+          <a rel="noreferrer" target={"_blank"} href={LINKS.twitter}>
             <Twitter />
           </a>
         </div>

@@ -7,6 +7,7 @@ import { ReactComponent as GovernanceModel } from "assets/svgs/governance-model.
 import { ReactComponent as Intersect2 } from "assets/svgs/intersect2.svg";
 import { useCountdown } from "hooks/useCountdown";
 import styled from "styled-components";
+import { LINKS } from "utils/constants";
 
 const GovernanceModelDiv = styled.div`
   background: linear-gradient(
@@ -36,16 +37,21 @@ const Hero = () => {
         <br className="xl:hidden" /> Reserve <br className="hidden xl:block" />{" "}
         Currency with <span className="lg-text !inline-block">Adirize DAO</span>
       </h3>
-      <p className="text-center text-white text-12 leading-[22px] mt-8 xl:mt-[31px] xl:text-base xl:text-[#E0E0E0] max-w-[811px] xl:mx-auto">
+      <p className="text-center text-white text-12 leading-[22px] mx-auto mt-8 xl:mt-[31px] xl:text-base xl:text-[#E0E0E0] max-w-[811px] xl:mx-auto">
         With the continued growth and development of the blockchain-DeFi niche,
         as well as an urgent need to address the limitation, there is a need for
         a decentralized reserve protocol that will change centralized USD (prone
         to depreciate).
       </p>
       <div className="mt-8 xl:mt-[27px] flex centers space-x-8">
-        <button className="lg-btn px-8">
+        <a
+          className="lg-btn px-8 centers"
+          href={LINKS.presale}
+          target="_blank"
+          rel="noreferrer"
+        >
           <p className="text-white font-semibold text-sm">Buy Now</p>
-        </button>
+        </a>
         <button className="lg-border-btn">
           <p className="text-white font-semibold text-sm">Audit</p>
         </button>
@@ -83,9 +89,8 @@ const Hero = () => {
               <GovernanceModelDiv className="pt-[32px] pb-[22px] max-w-[543px] px-[10px] text-center text-white text-xl">
                 Adirize is DAO-governed. All decisions are formed by community
                 members on the forum and made by token holders through voting.
-                $ADI token is utilized to control the decentralized Adirize
-                protocol in addition to being a treasury-backed reserve
-                currency.
+                is utilized to control the decentralized Adirize protocol in
+                addition to being a treasury-backed reserve currency.
               </GovernanceModelDiv>
             </div>
           </div>

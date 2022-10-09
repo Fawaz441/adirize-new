@@ -3,6 +3,7 @@ import { ReactComponent as Hamburger } from "assets/svgs/hamburger.svg";
 import { ReactComponent as Logo } from "assets/svgs/logo.svg";
 import MobileNav from "./MobileNav";
 import styled from "styled-components";
+import { LINKS } from "utils/constants";
 
 const FakeBg = styled.div`
   background: linear-gradient(
@@ -53,9 +54,14 @@ const TopNav = () => {
             </a>
           </li>
         </ul>
-        <button className="lg-btn hidden xl:flex items-center justify-center px-[56px]">
+        <a
+          href={LINKS.login}
+          target="_blank"
+          rel="noreferrer"
+          className="lg-btn hidden xl:flex items-center justify-center px-[56px]"
+        >
           <span className="text-white text-sm">Login</span>
-        </button>
+        </a>
         <Hamburger onClick={() => setShowNav(true)} className="xl:hidden" />
         <div className="absolute bottom-0 left-0 w-full lg-btn !h-1 xl:hidden" />
         <MobileNav

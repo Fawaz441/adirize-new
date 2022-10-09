@@ -3,6 +3,10 @@ import TopNav from "components/TopNav";
 import Hero from "components/home/Hero";
 import { ReactComponent as Ellipse } from "assets/svgs/ellipse.svg";
 import { ReactComponent as Intersect2 } from "assets/svgs/intersect-2.svg";
+import { ReactComponent as Waves } from "assets/svgs/waves2.svg";
+import { ReactComponent as GlowingDisk } from "assets/svgs/glowing-disk.svg";
+import { ReactComponent as Roundball } from "assets/svgs/roundball.svg";
+import { ReactComponent as DougnutDisk } from "assets/svgs/doughnut-disk.svg";
 import TokenInfo from "components/home/TokenInfo";
 import WiredTokens from "components/illustrations/WiredTokens";
 import TokenomicsDiagram from "components/illustrations/TokenomicsDiagram";
@@ -12,11 +16,14 @@ import Roadmap from "components/home/Roadmap";
 import HowToBenefit from "components/home/HowToBenefit";
 import FAQ from "components/home/FAQ";
 import Footer from "components/Footer";
+import LargePresale from "components/home/LargePresale";
 
 const Home = () => {
   return (
     <div className="relative">
       <TopNav />
+      <GlowingDisk className="mt-[472px] left-0 absolute"></GlowingDisk>
+      <DougnutDisk className="absolute right-[100px] top-[100px]" />
       <Ellipse className="absolute top-0 left-[-527px]" />
       <div className="light-gradient">
         <Hero />
@@ -56,17 +63,18 @@ const Home = () => {
       </div>
       <div className="hidden xl:block mt-[-100px]">
         <Intersect2 />
+        <Roundball className="absolute top-[400px] left-[100px]" />
       </div>
       <div className="flex flex-col space-y-4 mt-[-80px] px-4">
         <h4 className="text-[48px] lg-text font-bold text-center !hidden xl:!block">
           $ADI Token
         </h4>
-        <div className="flex flex-col xl:flex-row xl:items-center xl:space-x-[260px]">
+        <div className="flex flex-col xl:flex-row xl:items-center xl:space-x-[260px] w-full">
           <h4 className="text-[32px] lg-text font-bold text-center xl:hidden">
             $ADI Token
           </h4>
-          <div className="flex flex-col items-center justify-center max-w-[550px]">
-            <p className="text-white text-center text-sm">
+          <div className="flex flex-col items-center justify-center max-w-[550px] !ml-auto">
+            <p className="text-white text-center text-sm !mx-auto">
               The Adirize protocol has created a reserve cryptocurrency called
               ADI. However, ADI should not beconfused with Tether or USDC, which
               are both stablecoins. Consider the Adirize system to be analogous
@@ -130,8 +138,18 @@ const Home = () => {
         </h3>
         <TokenomicsDiagram />
         <TokenomicsDetail />
-        <Presale />
-        <Roadmap />
+        <div className="xl:hidden">
+          <Presale />
+          <Roadmap />
+        </div>
+        <div className="hidden xl:block">
+          <LargePresale />
+        </div>
+        <div className="hidden xl:block mt-[117px] pb-[153.98px] relative">
+          <div className="absolute bottom-0 left-0 w-full flex items-center justify-center">
+            <Waves className="w-full" />
+          </div>
+        </div>
         <HowToBenefit />
         <FAQ />
       </div>
