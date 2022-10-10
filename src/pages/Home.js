@@ -142,7 +142,7 @@ const Home = () => {
           <Presale />
           <Roadmap />
         </div>
-        <div className="hidden xl:block">
+        <div className="hidden xl:block" id="roadmap">
           <LargePresale />
         </div>
         <div className="hidden xl:block mt-[117px] pb-[153.98px] relative">

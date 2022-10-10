@@ -119,7 +119,7 @@ const faqItems = [
 
 const FAQ = () => {
   return (
-    <div className="mt-[100px] xl:!mt-[128px]">
+    <div className="mt-[100px] xl:!mt-[128px]" id="faqs">
       <h3 className="text-center lg-text text-[32px] font-bold mb-[40px]">
         Frequently Asked Questions
       </h3>

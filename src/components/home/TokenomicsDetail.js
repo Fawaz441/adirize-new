@@ -82,7 +82,7 @@ const TokenomicsDetail = () => {
         <Pillar className="absolute left-[75%]" />
       </div>
       <div className="flex xl:pt-1 xl:items-center relative">
-        <GlowingDisk className="absolute left-[49px]" />
+        <GlowingDisk className="absolute left-[49px] hidden xl:block" />
         <TokenomicsBig className="hidden xl:block" />
         <Table className="w-full p-4 xl:max-w-[562px]">
           <div className="grid grid-cols-[10%_30%_20%_40%] mb-4 space-x-2">

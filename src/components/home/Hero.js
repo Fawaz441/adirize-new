@@ -31,7 +31,7 @@ const GovernanceModelDiv = styled.div`
 const Hero = () => {
   const [days, hours, minutes, seconds] = useCountdown(new Date(2022, 11, 2));
   return (
-    <div className="relative pt-[44px] px-[22px]">
+    <div className="relative pt-[44px] px-[22px]" id="home">
       <h3 className="text-24 xl:text-[48px] text-center text-white font-bold">
         Unlock the World Of
         <br className="xl:hidden" /> Decentralized

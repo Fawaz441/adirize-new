@@ -44,13 +44,8 @@ const TopNav = () => {
             </a>
           </li>
           <li>
-            <a className="text-[#e3e3e3] text-base" href="#roadmap">
+            <a className="text-[#e3e3e3] text-base" href="#faqs">
               FAQ
-            </a>
-          </li>
-          <li>
-            <a className="text-[#e3e3e3] text-base" href="#roadmap">
-              Monetary Policy Tools
             </a>
           </li>
         </ul>

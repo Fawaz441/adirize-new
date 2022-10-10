@@ -3,6 +3,7 @@ import styled from "styled-components";
 import clsx from "classnames";
 import { ReactComponent as Logo } from "assets/svgs/logo.svg";
 import { ReactComponent as Exit } from "assets/svgs/exit.svg";
+import { LINKS } from "utils/constants";
 
 const MobileNavWrapper = styled.div`
   height: 100vh;
@@ -74,13 +75,41 @@ const MobileNav = ({ classNames, onClose }) => {
       </div>
       <div className="centers h-full">
         <ul className="flex flex-col space-y-[40px] h-full centers">
-          <li className="text-[18px] text-white text-center">Home</li>
-          <li className="text-[18px] text-white text-center">Roadmap</li>
-          <li className="text-[18px] text-white text-center">FAQs</li>
-          <li className="text-[18px] text-white text-center">
-            Monetary Policy
+          <li>
+            <a
+              className="text-[18px] text-white text-center"
+              href="#home"
+              onClick={onClose}
+            >
+              Home
+            </a>
           </li>
-          <button className="login">Login</button>
+          <li>
+            <a
+              className="text-[18px] text-white text-center"
+              href="#roadmap"
+              onClick={onClose}
+            >
+              Roadmap
+            </a>
+          </li>
+          <li>
+            <a
+              className="text-[18px] text-white text-center"
+              href="#faqs"
+              onClick={onClose}
+            >
+              FAQs
+            </a>
+          </li>
+          <a
+            className="login"
+            href={LINKS.login}
+            rel="noreferrer"
+            target={"_blank"}
+          >
+            Login
+          </a>
         </ul>
       </div>
     </MobileNavWrapper>

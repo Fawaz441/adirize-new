@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import clsx from "classnames";
+import { isSafari } from "react-device-detect";
 import { ReactComponent as RoadMapLarge } from "assets/svgs/roadmap-large.svg";
 import { ReactComponent as StripedBall } from "assets/svgs/striped-ball.svg";
 
@@ -90,8 +91,9 @@ const LargePresale = () => {
           ))}
         </PresaleStagesWrapper>
         <StagesTable className="w-[1200px] mx-auto py-[27px] relative">
-          <div className="absolute bottom-[-400px] right-[-40px] w-[280px] h-[280px] bg-[#F2994A] blur-[172.5px] hidden xl:block" />
-
+          {!isSafari && (
+            <div className="absolute bottom-[-400px] right-[-40px] w-[280px] h-[280px] rounded-[140px] bg-[#F2994A] blur-[172.5px] hidden xl:block" />
+          )}
           <div className="flex">
             <div className="flex flex-col items-center space-y-[40px] w-[25%] border-r-[1px] border-r-[#F0723A]/[0.4]">
               <span className="opacity-0 pointer-events-none text-sm text-white uppercase ">
