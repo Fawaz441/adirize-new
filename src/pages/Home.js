@@ -17,8 +17,11 @@ import HowToBenefit from "components/home/HowToBenefit";
 import FAQ from "components/home/FAQ";
 import Footer from "components/Footer";
 import LargePresale from "components/home/LargePresale";
+import { motion, useTime, useTransform } from "framer-motion";
 
 const Home = () => {
+  const time = useTime();
+  const rotate = useTransform(time, [0, 4000], [0, 360], { clamp: false });
   return (
     <div className="relative">
       <TopNav />
@@ -63,7 +66,12 @@ const Home = () => {
       </div>
       <div className="hidden xl:block mt-[-100px]">
         <Intersect2 />
-        <Roundball className="absolute top-[400px] left-[100px]" />
+        <motion.div
+          className="absolute top-[400px] left-[100px]"
+          style={{ rotate }}
+        >
+          <Roundball />
+        </motion.div>
       </div>
       <div className="flex flex-col space-y-4 mt-[-80px] px-4">
         <h4 className="text-[48px] lg-text font-bold text-center !hidden xl:!block">

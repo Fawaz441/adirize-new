@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { motion } from "framer-motion";
 import { ReactComponent as Hamburger } from "assets/svgs/hamburger.svg";
 import { ReactComponent as Logo } from "assets/svgs/logo.svg";
 import MobileNav from "./MobileNav";
@@ -18,6 +19,11 @@ const FakeBg = styled.div`
   );
 `;
 
+const variants = {
+  animate: { opacity: 1 },
+  hidden: { opacity: 0 },
+};
+
 const TopNav = () => {
   const [showNav, setShowNav] = React.useState(false);
   useEffect(() => {
@@ -30,7 +36,12 @@ const TopNav = () => {
   return (
     <nav className="relative topnav xl:!bg-none xl:px-[78px] xl:pt-[40px]">
       <FakeBg className="absolute h-[153px] hidden xl:block top-0 left-0 w-full z-[1] " />
-      <div className="px-6 py-[22.67px] z-[2] relative flex items-center justify-between xl:py-[30px] xl:px-8 xl:border-[1px] xl:border-[#F59848] xl:bg-[#fff]/[0.23] xl:rounded-2xl">
+      <motion.div
+        variants={variants}
+        animate="animate"
+        hidden="hidden"
+        className="px-6 py-[22.67px] z-[2] relative flex items-center justify-between xl:py-[30px] xl:px-8 xl:border-[1px] xl:border-[#F59848] xl:bg-[#fff]/[0.23] xl:rounded-2xl"
+      >
         <Logo />
         <ul className="xl:flex items-center space-x-[73.67px] hidden">
           <li>
@@ -63,7 +74,7 @@ const TopNav = () => {
           onClose={() => setShowNav(false)}
           classNames={showNav ? "!opacity-100 !pointer-events-auto" : ""}
         />
-      </div>
+      </motion.div>
     </nav>
   );
 };
