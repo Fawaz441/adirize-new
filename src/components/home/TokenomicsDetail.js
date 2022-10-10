@@ -3,6 +3,7 @@ import styled from "styled-components";
 import clsx from "classnames";
 import { ReactComponent as Pillar } from "assets/svgs/pillar.svg";
 import { ReactComponent as TokenomicsBig } from "assets/svgs/tokenomics-big.svg";
+import { ReactComponent as GlowingDisk } from "assets/svgs/glowing-disk.svg";
 
 const Table = styled.div`
   background: linear-gradient(
@@ -58,7 +59,8 @@ const tableData = [
 
 const TokenomicsDetail = () => {
   return (
-    <div>
+    <div className="relative">
+      <div className="absolute hidden xl:block left-[-599px] w-[704px] h-[704px] blur-[275.5px] bubble-gradient"></div>
       <div className="xl:!pt-8 xl:!pb-3 lg-border-btn flex space-x-[40.33px] !h-auto !p-2 overflow-hidden xl:items-center xl:justify-center xl:max-w-[816px] xl:mx-auto">
         {data.map((item, key) => (
           <div
@@ -79,7 +81,8 @@ const TokenomicsDetail = () => {
         <Pillar className="absolute left-[25%]" />
         <Pillar className="absolute left-[75%]" />
       </div>
-      <div className="flex xl:pt-1 xl:items-center">
+      <div className="flex xl:pt-1 xl:items-center relative">
+        <GlowingDisk className="absolute left-[49px]" />
         <TokenomicsBig className="hidden xl:block" />
         <Table className="w-full p-4 xl:max-w-[562px]">
           <div className="grid grid-cols-[10%_30%_20%_40%] mb-4 space-x-2">

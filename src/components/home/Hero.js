@@ -5,6 +5,7 @@ import { ReactComponent as MachineLeft } from "assets/svgs/machine-left.svg";
 import { ReactComponent as MachineRight } from "assets/svgs/machine-right.svg";
 import { ReactComponent as GovernanceModel } from "assets/svgs/governance-model.svg";
 import { ReactComponent as Intersect2 } from "assets/svgs/intersect2.svg";
+import { ReactComponent as Blur } from "assets/svgs/blur.svg";
 import { useCountdown } from "hooks/useCountdown";
 import styled from "styled-components";
 import { LINKS } from "utils/constants";
@@ -56,13 +57,14 @@ const Hero = () => {
           <p className="text-white font-semibold text-sm">Audit</p>
         </button>
       </div>
-      <div className="mt-8 xl:mt-[44px] centers flex-col space-y-4">
+      <div className="mt-8 xl:mt-[44px] centers flex-col space-y-4 relative">
         <h4 className="lg-text text-base font-bold xl:hidden">
           Token Public Launch
         </h4>
         <div className="flex flex-row justify-center">
           <MachineLeft className="hidden xl:block" />
-          <div className="launch-box p-3 xl:w-[484px] xl:mx-[94px] xl:h-[208px] flex items-center justify-center ">
+          <div className="launch-box p-3 xl:w-[484px] xl:mx-[94px] xl:h-[208px] flex items-center justify-center relative">
+            <Blur className="absolute top-[-100px] left-[-150px] xl:left-auto xl:right-[-100px]" />
             <div className="flex flex-col space-y-4 items-center justify-center">
               <span className="text-white text-base font-bold hidden xl:block">
                 TOKEN PUBLIC LAUNCH

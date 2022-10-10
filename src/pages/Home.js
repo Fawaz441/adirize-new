@@ -29,7 +29,7 @@ const Home = () => {
         <Hero />
       </div>
       <TokenInfo />
-      <div className="xl:hidden">
+      <div className="xl:hidden centers translate-x-[30px]">
         <svg
           className="ml-[-50px] mt-[-50px]"
           width="428"
@@ -69,11 +69,11 @@ const Home = () => {
         <h4 className="text-[48px] lg-text font-bold text-center !hidden xl:!block">
           $ADI Token
         </h4>
-        <div className="flex flex-col xl:flex-row xl:items-center xl:space-x-[260px] w-full">
+        <div className="flex flex-col xl:flex-row xl:items-center xl:justify-center xl:space-x-[60px] w-full">
           <h4 className="text-[32px] lg-text font-bold text-center xl:hidden">
             $ADI Token
           </h4>
-          <div className="flex flex-col items-center justify-center max-w-[550px] !ml-auto">
+          <div className="flex flex-col items-center justify-center max-w-[550px] !mx-auto xl:!mx-0">
             <p className="text-white text-center text-sm !mx-auto">
               The Adirize protocol has created a reserve cryptocurrency called
               ADI. However, ADI should not beconfused with Tether or USDC, which
@@ -88,7 +88,7 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <div className="centers">
+          <div className="centers xl:!items-start xl:!justify-start">
             <WiredTokens />
           </div>
         </div>

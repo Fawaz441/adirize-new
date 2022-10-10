@@ -63,3 +63,7 @@ html {
 .light-gradient {
   background: linear-gradient(108.96deg, rgba(245, 152, 72, 0.05) -27.23%, rgba(189, 81, 3, 0.05) 20.1%, rgba(190, 84, 3, 0.05) 56.48%, rgba(210, 139, 0, 0.05) 69.51%, rgba(202, 117, 1, 0.05) 108.78%, rgba(87, 62, 42, 0.05) 130.21%, rgba(31, 31, 31, 0.05) 155.87%);
 }
+
+.bubble-gradient {
+  background: linear-gradient(108.96deg, #F59848 -27.23%, #BD5103 20.1%, #D28B00 97.96%, #CA7501 108.78%, #573E2A 130.21%, #1F1F1F 155.87%);
+}

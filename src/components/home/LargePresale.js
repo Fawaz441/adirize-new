@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import clsx from "classnames";
 import { ReactComponent as RoadMapLarge } from "assets/svgs/roadmap-large.svg";
+import { ReactComponent as StripedBall } from "assets/svgs/striped-ball.svg";
 
 const PresaleStagesWrapper = styled.div`
   background: linear-gradient(
@@ -70,7 +71,7 @@ const tableFields = [
 const LargePresale = () => {
   return (
     <div className="flex flex-col space-y-[270px]">
-      <div className="flex flex-col space-y-[48px]">
+      <div className="flex flex-col space-y-[48px] ">
         <h3 className="lg-text text-[48px] text-center">Presale Stages</h3>
         <PresaleStagesWrapper className="flex mx-auto w-[1200px] py-[28px]">
           {fields.map((field, index) => (
@@ -88,7 +89,9 @@ const LargePresale = () => {
             </div>
           ))}
         </PresaleStagesWrapper>
-        <StagesTable className="w-[1200px] mx-auto py-[27px]">
+        <StagesTable className="w-[1200px] mx-auto py-[27px] relative">
+          <div className="absolute bottom-[-400px] right-[-40px] w-[280px] h-[280px] bg-[#F2994A] blur-[172.5px] hidden xl:block" />
+
           <div className="flex">
             <div className="flex flex-col items-center space-y-[40px] w-[25%] border-r-[1px] border-r-[#F0723A]/[0.4]">
               <span className="opacity-0 pointer-events-none text-sm text-white uppercase ">
@@ -138,10 +141,9 @@ const LargePresale = () => {
         </StagesTable>
       </div>
       <div>
-        <h3 className="text-center lg-text font-bold text-[48px]">
-          Presale Stages
-        </h3>
-        <div className="centers mt-[64px]">
+        <h3 className="text-center lg-text font-bold text-[48px]">Roadmap</h3>
+        <div className="centers mt-[64px] relative">
+          <StripedBall className="absolute right-[30px] top-[30px]" />
           <RoadMapLarge />
         </div>
       </div>

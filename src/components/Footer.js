@@ -6,6 +6,7 @@ import { ReactComponent as Twitter } from "assets/svgs/social/twitter.svg";
 import { ReactComponent as Binance } from "assets/svgs/binance.svg";
 import { ReactComponent as Ethereum } from "assets/svgs/ethereum.svg";
 import { ReactComponent as Solana } from "assets/svgs/solana.svg";
+import { ReactComponent as Bubble } from "assets/svgs/bubble.svg";
 import { LINKS } from "utils/constants";
 
 const FooterWrapper = styled.div`
@@ -43,7 +44,8 @@ const SubFooter = styled.div`
 const Footer = () => {
   return (
     <div>
-      <FooterWrapper className="mt-[103px] centers flex-col space-y-[20px]">
+      <FooterWrapper className="relative mt-[103px] centers flex-col space-y-[20px]">
+        <Bubble className="absolute left-[-126px] top-[-40px]" />
         <Logo />
         <span className="text-center text-white/[.4] text-12">
           Join our social media channels to participate in the discussion
