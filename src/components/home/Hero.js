@@ -64,10 +64,8 @@ const Hero = () => {
         animate="animate"
         className="text-center text-white text-12 leading-[22px] mx-auto mt-8 xl:mt-[31px] xl:text-base xl:text-[#E0E0E0] max-w-[811px] xl:mx-auto"
       >
-        With the continued growth and development of the blockchain-DeFi niche,
-        as well as an urgent need to address the limitation, there is a need for
-        a decentralized reserve protocol that will change centralized USD (prone
-        to depreciate).
+        AdirizeDAO is developing ADI, a Web3 decentralized reserve currency that
+        is fully liquid, backed by assets and controlled 100% by the community.
       </motion.p>
       <motion.div
         variants={buttons}
@@ -133,7 +131,7 @@ const Hero = () => {
           </motion.div>
         </motion.div>
         <Waves className="h-[116px] w-full xl:hidden" />
-        <div className="hidden xl:block">
+        <div className="hidden xl:block" id="governance-model">
           <Intersect2 />
           <div className="bg-[#1C1C1C] w-full mt-[-150px] pb-[150px]">
             <h3 className="text-[48px] text-[#F59848] text-center">
@@ -141,12 +139,10 @@ const Hero = () => {
             </h3>
             <div className="mt-8 flex space-x-[144px] justify-center items-center">
               <GovernanceModel />
-              <GovernanceModelDiv className="pt-[32px] pb-[22px] max-w-[543px] px-[10px] text-center text-white text-xl">
-                Adirize is DAO-governed. All decisions are formed by community
-                members on the forum and made by token holders through voting.
-                is utilized to control the decentralized Adirize protocol in
-                addition to being a treasury-backed reserve currency.
-              </GovernanceModelDiv>
+              <GovernanceModelDiv
+                id="governance-model-text"
+                className="pt-[32px] pb-[22px] max-w-[543px] px-[10px] text-center text-white text-xl"
+              ></GovernanceModelDiv>
             </div>
           </div>
         </div>

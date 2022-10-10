@@ -5,6 +5,7 @@ const TokenomicsDiagram = () => {
     <div className="h-[424px] relative centers w-full mt-[-80px] xl:hidden">
       <div className="absolute h-8 w-8 rounded-full left-[40px] top-[10px] bg-[#F7D96D]" />
       <svg
+        id="tokenomics-round"
         width="424"
         height="424"
         viewBox="0 0 424 424"

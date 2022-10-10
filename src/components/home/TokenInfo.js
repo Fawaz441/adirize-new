@@ -62,11 +62,11 @@ const TokenInfo = () => {
             Is ADI a Stable Coin?
           </h3>
           <p className="text-sm text-[#E0E0E0]">
-            ADI isn't a semi-centralized stablecoin like USDT or USDC. Instead,
-            ADI intends to be a decentralized algorithmic reserve currency. Like
-            the gold standard, ADI gives free-floating value to its users that
-            they can always rely on, thanks to the fractional reserves from
-            which it derives its inherent value.{" "}
+            ADI is NOT a stable coin. Our objective is to create a Web3-native
+            asset that resembles the gold standard and assists users in
+            conserving purchasing power. Due to the fractional reserves from
+            which it draws its inherent value, ADI provides its customers with
+            free-floating value that they can always rely on.
           </p>
         </Stability>
       </div>

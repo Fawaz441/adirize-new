@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
 import TopNav from "components/TopNav";
 import Hero from "components/home/Hero";
 import { ReactComponent as Ellipse } from "assets/svgs/ellipse.svg";
@@ -18,12 +19,61 @@ import FAQ from "components/home/FAQ";
 import Footer from "components/Footer";
 import LargePresale from "components/home/LargePresale";
 import { motion, useTime, useTransform } from "framer-motion";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import TextPlugin from "gsap/TextPlugin";
 
 const Home = () => {
+  let home = useRef();
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(TextPlugin);
+    let ctx = gsap.context(() => {
+      gsap.to(["#machine-left", "#machine-right"], {
+        y: 40,
+        repeat: -1,
+        yoyo: true,
+        ease: "power2.inOut",
+        duration: 3,
+      });
+
+      gsap.from("#governance-model-svg", {
+        opacity: 0,
+        scale: 0.5,
+        duration: 1,
+        ease: "back.inOut(1.7)",
+        scrollTrigger: {
+          trigger: "#governance-model",
+          toggleActions: "play play restart reverse",
+        },
+      });
+
+      gsap.from("#tokenomics-big-svg", {
+        scale: 0.5,
+        duration: 1,
+        rotate: 360,
+        ease: "power2.inOut",
+        scrollTrigger: {
+          trigger: "#tokenomics",
+          toggleActions: "play play restart reverse",
+        },
+      });
+
+      gsap.to("#governance-model-text", {
+        text: `Adirize is DAO-governed. All decisions are formed by community
+        members on the forum and made by token holders through voting.
+        is utilized to control the decentralized Adirize protocol in
+        addition to being a treasury-backed reserve currency.`,
+        duration: 5,
+        scrollTrigger: "#governance-model",
+      });
+    }, home);
+
+    return () => ctx.revert();
+  }, []);
   const time = useTime();
   const rotate = useTransform(time, [0, 4000], [0, 360], { clamp: false });
   return (
-    <div className="relative">
+    <div className="relative" ref={home}>
       <TopNav />
       <GlowingDisk className="mt-[472px] left-0 absolute"></GlowingDisk>
       <DougnutDisk className="absolute right-[100px] top-[100px]" />
@@ -83,18 +133,18 @@ const Home = () => {
           </h4>
           <div className="flex flex-col items-center justify-center max-w-[550px] !mx-auto xl:!mx-0">
             <p className="text-white text-center text-sm !mx-auto">
-              The Adirize protocol has created a reserve cryptocurrency called
-              ADI. However, ADI should not beconfused with Tether or USDC, which
-              are both stablecoins. Consider the Adirize system to be analogous
-              to the gold standard in that it issues and backsADI tokens with a
-              reserve of precious assets.
+              ADI is the native token of the Adirize DAO ecosystem and a
+              decentralized reserve currency that is not pegged to the US
+              Dollar. Adirize is developing a strong and ever-growing treasury
+              that provides stability allowing the project to grow.
+              <br />
+              <br /> Each ADI is backed by $1 worth of assets from the treasury.
+              This means that the price can not drop below $1 as the treasury
+              will buy the tokens back and burn the ADI when this happens,
+              therefore increasing the value of the tokens in circulation. As
+              there is no upper limit, the price of ADI has no cap when trading
+              in an upwards motion.
             </p>
-            <div className="hidden xl:block p-8 mt-6 bg-[#573E2A] max-w-[412px] rounded-2xl">
-              <p className="lg-text text-center">
-                “The ADI Token Acts as Both a Stable Currency and a Governance
-                Token for the Protocol.”
-              </p>
-            </div>
           </div>
           <div className="centers xl:!items-start xl:!justify-start">
             <WiredTokens />
