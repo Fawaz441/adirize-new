@@ -25,7 +25,7 @@ const RoadMapItemWrapper = styled.div`
 const roadmap_data = [
   {
     name: "Phase I",
-    phases: ["Market Operations", "Stablecoins", "Exchange", "Adiri DAO"],
+    phases: ["Market Operations", "Exchange", "Adiri DAO"],
   },
   {
     name: "Phase II",

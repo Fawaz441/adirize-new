@@ -61,7 +61,7 @@ const Footer = () => {
       </FooterWrapper>
       <SubFooter className="p-3 flex flex-col space-y-3 xl:flex-row xl:space-y-0 xl:py-[30px] xl:px-[80px] xl:justify-between">
         <p className="text-white text-12 xl:text-sm text-center">
-          ©2021 ADIRIZE. All rights reserved
+          ©2022 ADIRIZE. All rights reserved
         </p>
         <div className="justify-center flex space-x-[30px] items-center">
           <span className="text-white text-sm font-medium">Multichain</span>
