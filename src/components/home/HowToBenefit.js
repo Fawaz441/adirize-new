@@ -11,8 +11,8 @@ const HowToBenefit = () => {
         To provide liquidity for the ecosystem, Adirize will employ two
         important techniques, staking and bonding.
       </p>
-      <div className="mt-[40px] xl:mt-12 flex flex-col space-y-[40px] xl:flex-row xl:space-y-0 xl:mx-[92px]">
-        <div className="bg-[#CBB18A]/[.5] px-[14px] py-6 rounded-[16px] xl:w-1/2 xl:flex-shrink-0 xl:rounded-none xl:py-[64px] xl:px-[51px]">
+      <div className="mt-[40px] xl:mt-12 flex flex-col space-y-[40px] xl:flex-row xl:space-y-0 xl:justify-center">
+        <div className="max-w-[600px] bg-[#CBB18A]/[.5] px-[14px] py-6 rounded-[16px] xl:w-1/2 xl:flex-shrink-0 xl:rounded-none xl:py-[64px] xl:px-[51px]">
           <div className="flex items-center justify-between">
             <span className="text-xl text-white font-semibold xl:text-[40px]">
               Staking
@@ -30,7 +30,7 @@ const HowToBenefit = () => {
             Staking
           </button>
         </div>
-        <div className="bg-[#686069]/[.5] px-[14px] py-6 rounded-[16px] xl:w-1/2 xl:flex-shrink-0 xl:rounded-none xl:py-[64px] xl:px-[51px]">
+        <div className="max-w-[600px] bg-[#686069]/[.5] px-[14px] py-6 rounded-[16px] xl:w-1/2 xl:flex-shrink-0 xl:rounded-none xl:py-[64px] xl:px-[51px]">
           <div className="flex items-center justify-between">
             <span className="text-xl text-white font-semibold xl:text-[40px]">
               Bonding
