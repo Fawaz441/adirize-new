@@ -1,13 +1,17 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import TopNav from "components/TopNav";
-import Hero from "components/home/Hero";
+import { motion, useTime, useTransform } from "framer-motion";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import TextPlugin from "gsap/TextPlugin";
+
 import { ReactComponent as Ellipse } from "assets/svgs/ellipse.svg";
 import { ReactComponent as Intersect2 } from "assets/svgs/intersect-2.svg";
 import { ReactComponent as Waves } from "assets/svgs/waves2.svg";
 import { ReactComponent as GlowingDisk } from "assets/svgs/glowing-disk.svg";
 import { ReactComponent as Roundball } from "assets/svgs/roundball.svg";
 import { ReactComponent as DougnutDisk } from "assets/svgs/doughnut-disk.svg";
+import TopNav from "components/TopNav";
+import Hero from "components/home/Hero";
 import TokenInfo from "components/home/TokenInfo";
 import WiredTokens from "components/illustrations/WiredTokens";
 import TokenomicsDiagram from "components/illustrations/TokenomicsDiagram";
@@ -18,9 +22,8 @@ import HowToBenefit from "components/home/HowToBenefit";
 import FAQ from "components/home/FAQ";
 import Footer from "components/Footer";
 import LargePresale from "components/home/LargePresale";
-import { motion, useTime, useTransform } from "framer-motion";
-import ScrollTrigger from "gsap/ScrollTrigger";
-import TextPlugin from "gsap/TextPlugin";
+
+import { largeScreenClasses } from "utils/constants";
 
 const Home = () => {
   let home = useRef();
@@ -115,7 +118,7 @@ const Home = () => {
         </svg>
       </div>
       <div className="hidden xl:block mt-[-100px]">
-        <Intersect2 />
+        <Intersect2 className="6xl:hidden mx-auto" />
         <motion.div
           className="absolute top-[400px] left-[100px]"
           style={{ rotate }}
@@ -194,8 +197,10 @@ const Home = () => {
         <h3 className="lg-text text-[24px] font-bold text-center mt-[-70px] pb-[70px] xl:pb-[32px] xl:text-[48px]">
           Tokenomics
         </h3>
-        <TokenomicsDiagram />
-        <TokenomicsDetail />
+        <div className={largeScreenClasses}>
+          <TokenomicsDiagram />
+          <TokenomicsDetail />
+        </div>
         <div className="xl:hidden">
           <Presale />
           <Roadmap />

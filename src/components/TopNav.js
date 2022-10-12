@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
+import clsx from "classnames";
+import styled from "styled-components";
 import { motion } from "framer-motion";
 import { ReactComponent as Hamburger } from "assets/svgs/hamburger.svg";
 import { ReactComponent as Logo } from "assets/svgs/logo.svg";
+import { largeScreenClasses, LINKS } from "utils/constants";
 import MobileNav from "./MobileNav";
-import styled from "styled-components";
-import { LINKS } from "utils/constants";
 
 const FakeBg = styled.div`
   background: linear-gradient(
@@ -40,7 +41,10 @@ const TopNav = () => {
         variants={variants}
         animate="animate"
         hidden="hidden"
-        className="px-6 py-[22.67px] z-[2] relative flex items-center justify-between xl:py-[30px] xl:px-8 xl:border-[1px] xl:border-[#F59848] xl:bg-[#fff]/[0.23] xl:rounded-2xl"
+        className={clsx(
+          "px-6 py-[22.67px] z-[2] relative flex items-center justify-between xl:py-[30px] xl:px-8 xl:border-[1px] xl:border-[#F59848] xl:bg-[#fff]/[0.23] xl:rounded-2xl",
+          largeScreenClasses
+        )}
       >
         <Logo />
         <ul className="xl:flex items-center space-x-[73.67px] hidden">

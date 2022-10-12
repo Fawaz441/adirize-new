@@ -1,7 +1,6 @@
 import React from "react";
 import { motion, useTime, useTransform } from "framer-motion";
 import styled from "styled-components";
-import CountdownItem from "./CountdownItem";
 import { ReactComponent as Waves } from "assets/svgs/waves.svg";
 import { ReactComponent as MachineLeft } from "assets/svgs/machine-left.svg";
 import { ReactComponent as MachineRight } from "assets/svgs/machine-right.svg";
@@ -16,6 +15,7 @@ import {
   publicLunchStagger,
   publicLunchChild,
 } from "animations";
+import CountdownItem from "./CountdownItem";
 
 const GovernanceModelDiv = styled.div`
   background: linear-gradient(

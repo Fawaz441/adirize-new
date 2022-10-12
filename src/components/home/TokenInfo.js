@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import clsx from "classnames";
 import styled from "styled-components";
-import StableCoin from "../illustrations/StableCoin";
 import { ReactComponent as StableCoin2 } from "assets/svgs/stable-coin-2.svg";
 import { LINKS } from "utils/constants";
+import StableCoin from "../illustrations/StableCoin";
 
 const Background = styled.div`
   background: linear-gradient(

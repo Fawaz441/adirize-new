@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import clsx from "classnames";
-import { ReactComponent as Pillar } from "assets/svgs/pillar.svg";
 import styled from "styled-components";
+import { ReactComponent as Pillar } from "assets/svgs/pillar.svg";
 
 const Table = styled.div`
   background: linear-gradient(

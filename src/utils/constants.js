@@ -5,3 +5,5 @@ export const LINKS = {
   telegram: "https://t.me/AdirizeDAO_Official",
   twitter: "https://twitter.com/AdirizeDAO",
 };
+
+export const largeScreenClasses = "!max-w-6xl !mx-auto";
