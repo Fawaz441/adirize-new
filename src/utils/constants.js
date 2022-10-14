@@ -6,4 +6,4 @@ export const LINKS = {
   twitter: "https://twitter.com/AdirizeDAO",
 };
 
-export const largeScreenClasses = "!max-w-6xl !mx-auto";
+export const largeScreenClasses = "!max-w-6xl lg:!mx-auto";

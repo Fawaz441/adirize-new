@@ -2,12 +2,13 @@ import React from "react";
 
 const TokenomicsDiagram = () => {
   return (
-    <div className="h-[424px] relative centers w-full mt-[-80px] xl:hidden">
-      <div className="absolute h-8 w-8 rounded-full left-[40px] top-[10px] bg-[#F7D96D]" />
+    <div className="relative w-full mt-[-80px] xl:hidden">
+      <div className="absolute h-8 w-8 rounded-full top-[10px] bg-[#F7D96D]" />
       <svg
         id="tokenomics-round"
-        width="424"
-        height="424"
+        className="w-full h-full"
+        // width="424"
+        // height="424"
         viewBox="0 0 424 424"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
